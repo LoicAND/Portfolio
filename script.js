@@ -4,24 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const lights = Array.from(overlay.querySelectorAll('.traffic-light'));
     const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    
+    requestAnimationFrame(() => {
+        document.body.style.overflow = 'hidden';
+    });
 
     let index = 0;
     const interval = setInterval(() => {
         if (index < lights.length) {
-            lights[index].classList.remove('bg-gray-700');
-            lights[index].classList.add('bg-red-600', 'shadow-[0_0_20px_#E10600]');
+            const currentLight = lights[index];
+            requestAnimationFrame(() => {
+                if (currentLight) {
+                    currentLight.classList.remove('bg-gray-700');
+                    currentLight.classList.add('bg-red-600', 'shadow-[0_0_20px_#E10600]');
+                }
+            });
             index += 1;
             return;
         }
 
         clearInterval(interval);
         setTimeout(() => {
-            overlay.classList.add('opacity-0');
-            setTimeout(() => {
-                overlay.remove();
-                document.body.style.overflow = originalOverflow || '';
-            }, 500);
+            requestAnimationFrame(() => {
+                overlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    requestAnimationFrame(() => {
+                        overlay.remove();
+                        document.body.style.overflow = originalOverflow || '';
+                    });
+                }, 500);
+            });
         }, 500);
     }, 600);
 });
