@@ -13,6 +13,19 @@
     </style>
 </head>
 <body class="bg-gray-900 text-gray-800">
+    <div id="loadingScreen" class="fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-500">
+        <div class="text-center">
+            <h1 class="text-5xl font-black text-white mb-8">🏁</h1>
+            <div class="flex gap-5 justify-center mb-8" aria-label="Feux de départ">
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+            </div>
+            <p class="text-red-600 font-bold text-lg animate-pulse">Démarrage en cours...</p>
+        </div>
+    </div>
     <nav class="bg-gradient-to-r from-gray-900 to-black sticky top-0 z-50 shadow-lg shadow-red-600/30">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
