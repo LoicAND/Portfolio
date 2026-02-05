@@ -1,55 +1,55 @@
-# 🏁 F1 Passion Portfolio
+# 🚀 Portfolio - Loïc Andrianarivony
 
-> Un fan passionné par la Formula 1 - statistiques, analyses, et passion pour le sport automobile
+> Développeur Web passionné | Bachelor 2 à YNOV Toulouse | Code de qualité & Innovation
 
 ---
 
 ## 👋 À propos de moi
 
-Fan inconditionnel de la Formule 1, je partage ma passion à travers ce portfolio. Vous y trouverez mes analyses de courses, mes pilotes préférés, statistiques F1 et bien plus!
+Je suis Loïc Andrianarivony, étudiant en Bachelor 2ème année à YNOV Toulouse, passionné par le développement web et les technologies. Je crée des solutions innovantes et performantes pour le web moderne.
 
 ---
 
-## 🏎️ Mes Pilotes Favoris
+## 💻 Mes Spécialités
 
-- **Fernando Alonso** - L'expérience incarnée
-- **Max Verstappen** - Le champion de la nouvelle génération
-- **[Ajouter vos favoris ici]**
-
----
-
-## 📊 Sections Principales
-
-### 🎯 [Analyses de Courses](./race-analysis/)
-Mes analyses détaillées des Grand Prix mémorables et performances
-
-### 🏆 [Statistiques F1](./stats/)
-Données, records et curiosités sur l'histoire de la F1
-
-### 🐚 [Équipes & Constructeurs](./teams/)
-Mes équipes favorites et leur histoire
-
-### 📸 [Galerie](./gallery/)
-Photos et moments mémorables
-
-### 📝 [Blog & Articles](./articles/)
-Réflexions et articles sur la F1
+- **Frontend** - HTML, CSS, JavaScript, Tailwind CSS
+- **Backend & DevOps** - Python, Java, C++, Go, Docker
+- **Bases de Données** - MySQL et gestion de données
+- **Innovation** - Toujours apprendre et progresser
 
 ---
 
-## 🔥 Faits F1 du Moment
+## 🎯 Mes Projets
 
-- 🏁 Championnat 2025 en cours
-- ⚡ Plus rapides tours et stratégies
-- 🎪 Drames et moments épiques
+### 🎮 [SurviveIsland](https://github.com/LoicAND/SurviveIsland)
+Jeu de survie en Python où vous devez survivre sur une île pendant x jours. Gérez vos ressources, votre énergie et affrontez les défis de la nature.
+- **Technologie**: Python
+
+### 🍕 [Uber Eats](https://github.com/LoicAND/Uber_Eats)
+Service de commande en ligne avec livraison à domicile. Gestion des restaurants, des commandes et du système de livraison.
+- **Technologie**: Java
+
+### 💬 [SportHub-Forum](https://github.com/Joshua31400/SportHub-Forum)
+Forum communautaire sur le thème du sport. Plateforme de discussion avec gestion des utilisateurs, posts et commentaires.
+- **Technologies**: HTML, CSS, JavaScript, Go, Docker
+
+---
+
+## 🛠️ Outils & Technologies
+
+- **Langages**: HTML, CSS, JavaScript, Python, Java, C++, Go
+- **Frontend**: Tailwind CSS
+- **DevOps**: Docker, Git/GitHub
+- **Bases de Données**: MySQL
+- **Éditeur**: VS Code
 
 ---
 
 ## 📫 Contactez-moi
 
-- 📧 Email: [votre-email@exemple.com]
-- 🐦 Twitter/X: [@votrehandle]
-- 📱 Instagram: [votre-profil]
+- 📧 Email: [loic.andrianarivony31@gmail.com](mailto:loic.andrianarivony31@gmail.com)
+- 💼 LinkedIn: [@Loïc Andrianarivony](https://www.linkedin.com/in/lo%C3%AFc-andrianarivony-983431344/)
+- 🐙 GitHub: [@LoicAND](https://github.com/LoicAND)
 
 ---
 
@@ -59,4 +59,4 @@ Ce projet est sous licence [LICENSE](./LICENSE)
 
 ---
 
-**Let's Go Compete! 🏁**
+**Code de qualité & Innovation! 🚀**
