@@ -25,3 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 500);
     }, 600);
 });
+
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const burgerIcon = document.getElementById('burgerIcon');
+
+if (burgerBtn && mobileMenu && burgerIcon) {
+    burgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        burgerIcon.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
+    });
+    
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            burgerIcon.textContent = '☰';
+        });
+    });
+}
