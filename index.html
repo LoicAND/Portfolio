@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Loïc Andrianarivony, développeur web en Bachelor 2 à YNOV Toulouse. Spécialisé en HTML, CSS, JavaScript, Python, Java, Go et Docker. Découvrez mes projets web et contactez-moi.">
+    <title>Portfolio - Développeur Web</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload" as="image" href="asset/image_circulaire_recadree.webp" fetchpriority="high">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&display=swap"></noscript>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Exo 2', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-800">
+    <div id="loadingScreen" class="fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-500">
+        <div class="text-center">
+            <h1 class="text-5xl font-black text-white mb-8">🏁</h1>
+            <div class="flex gap-5 justify-center mb-8" role="group" aria-label="Feux de départ">
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+                <div class="traffic-light w-8 h-8 rounded-full bg-gray-700 transition-all duration-200"></div>
+            </div>
+            <p class="text-white font-bold text-lg animate-pulse">Démarrage en cours...</p>
+        </div>
+    </div>
+    <nav class="bg-gradient-to-r from-gray-900 to-black sticky top-0 z-50 shadow-lg shadow-red-600/30">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🏁</span>
+                <h1 class="text-2xl font-black text-red-600 tracking-widest">Dev</h1>
+            </div>
+            <ul class="hidden md:flex list-none gap-8">
+                <li><a href="#about" class="text-white font-bold hover:text-red-600 transition-colors duration-300">À propos</a></li>
+                <li><a href="#projects" class="text-white font-bold hover:text-red-600 transition-colors duration-300">Projets</a></li>
+                <li><a href="#contact" class="text-white font-bold hover:text-red-600 transition-colors duration-300">Contact</a></li>
+            </ul>
+            <button id="burgerBtn" class="md:hidden text-white text-3xl focus:outline-none" aria-label="Menu">
+                <span id="burgerIcon">☰</span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-gray-900 border-t border-red-600/30">
+            <ul class="flex flex-col">
+                <li><a href="#about" class="block text-white font-bold hover:bg-red-600 transition-colors duration-300 px-6 py-4 border-b border-gray-800">À propos</a></li>
+                <li><a href="#projects" class="block text-white font-bold hover:bg-red-600 transition-colors duration-300 px-6 py-4 border-b border-gray-800">Projets</a></li>
+                <li><a href="#contact" class="block text-white font-bold hover:bg-red-600 transition-colors duration-300 px-6 py-4">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-r from-black to-gray-900 text-white py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 relative z-10">
+            <div class="flex justify-center md:hidden mb-8">
+                <img src="asset/image_circulaire_recadree.webp" alt="Profil" class="w-48 h-48 rounded-full shadow-2xl border-4 border-red-600 object-cover" fetchpriority="high">
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-white to-red-600 bg-clip-text text-transparent tracking-wider">
+                    Développeur Web
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10">Code de qualité & Innovation</p>
+                <div class="flex gap-4 md:gap-6 flex-wrap justify-center md:justify-start">
+                    <a href="#projects" class="bg-red-600 text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold uppercase tracking-wider hover:bg-red-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-red-600/50 text-sm md:text-base">
+                        Voir mes projets
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white hover:text-red-600 transform hover:-translate-y-1 transition-all duration-300 text-sm md:text-base">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:flex flex-1 justify-center">
+                <img src="asset/image_circulaire_recadree.webp" alt="Profil" class="w-64 h-64 rounded-full shadow-2xl border-4 border-red-600 object-cover" fetchpriority="high">
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <section id="about" class="bg-gray-100 py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-black text-center mb-16 text-gray-900 relative pb-6">
+                À Propos de Moi
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-red-600 rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-700 mb-8">Je suis actuellement en Bachelor 2ème année à YNOV Toulouse campus, passionné par le développement web et les technologies. Je crée des solutions innovantes et performantes pour le web moderne.</p>
+                    
+                    <h3 class="text-2xl font-bold text-red-600 mb-6">Mes Spécialités</h3>
+                    <ul class="space-y-4">
+                        <li class="text-lg text-gray-700">💻 <strong>Web Development</strong> - HTML, CSS, JavaScript et Tailwind CSS</li>
+                        <li class="text-lg text-gray-700">⚙️ <strong>Backend & DevOps</strong> - Python, Java, C++, Docker</li>
+                        <li class="text-lg text-gray-700">📊 <strong>Bases de Données</strong> - MySQL et gestion de données</li>
+                        <li class="text-lg text-gray-700">🚀 <strong>Innovation</strong> - Toujours apprendre et progresser</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white p-4 md:p-8 rounded-lg shadow-lg border-t-4 border-red-600 text-center flex flex-col items-center justify-center">
+                        <span class="text-3xl md:text-4xl block mb-2">🎓</span>
+                        <p class="font-bold text-gray-700 text-xs md:text-base">Bachelor 2</p>
+                    </div>
+                    <div class="bg-white p-4 md:p-8 rounded-lg shadow-lg border-t-4 border-red-600 text-center flex items-center justify-center">
+                        <img src="asset/ynov.webp" alt="YNOV" class="w-full h-auto object-contain max-w-[80px] md:max-w-none">
+                    </div>
+                    <div class="bg-white p-4 md:p-8 rounded-lg shadow-lg border-t-4 border-red-600 text-center flex flex-col items-center justify-center">
+                        <span class="text-3xl md:text-4xl block mb-2">🚀</span>
+                        <p class="font-bold text-gray-700 text-xs md:text-base">Web Dev</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-white py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-black text-center mb-16 text-gray-900 relative pb-6">
+                Mes Projets Web
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-red-600 rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-red-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">SurviveIsland</h3>
+                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold uppercase">Game</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">Jeu de survie en Python où vous devez survivre sur une île pendant x jours. Gérez vos ressources, votre énergie et affrontez les défis de la nature.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold">Python</span>
+                    </div>
+                    <div class="flex gap-4 justify-end">
+                        <a href="https://github.com/LoicAND/SurviveIsland" class="bg-gray-900 text-white py-3 px-8 text-center font-bold hover:bg-red-600 transition-all uppercase tracking-wider relative overflow-hidden group" target="_blank" style="clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);">
+                            <span class="relative z-10">Voir</span>
+                            <div class="absolute inset-0 bg-red-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-red-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">Uber Eats </h3>
+                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold uppercase">App</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">Service de commande en ligne avec livraison à domicile. Gestion des restaurants, des commandes et du système de livraison.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold">Java</span>
+                    </div>
+                    <div class="flex gap-4 justify-end">
+                        <a href="https://github.com/LoicAND/Uber_Eats" class="bg-gray-900 text-white py-3 px-8 text-center font-bold hover:bg-red-600 transition-all uppercase tracking-wider relative overflow-hidden group" target="_blank" style="clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);">
+                            <span class="relative z-10">Voir</span>
+                            <div class="absolute inset-0 bg-red-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-red-600">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-bold text-gray-900">SportHub-Forum</h3>
+                        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold uppercase">Forum</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">Forum communautaire sur le thème du sport. Plateforme de discussion avec gestion des utilisateurs, posts et commentaires.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold">HTML</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold">CSS</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold">JavaScript</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold">Go</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-bold">Docker</span>
+                    </div>
+                    <div class="flex gap-4 justify-end">
+                        <a href="https://github.com/Joshua31400/SportHub-Forum" class="bg-gray-900 text-white py-3 px-8 text-center font-bold hover:bg-red-600 transition-all uppercase tracking-wider relative overflow-hidden group" target="_blank" style="clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);">
+                            <span class="relative z-10">Voir</span>
+                            <div class="absolute inset-0 bg-red-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gradient-to-r from-gray-900 to-black text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-black text-center mb-16 relative pb-6">
+                Mes Compétences
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-red-600 rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 border border-red-600/30 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-red-600 mb-6">Frontend</h3>
+                    <ul class="space-y-3">
+                        <li class="text-white">→ HTML</li>
+                        <li class="text-white">→ CSS</li>
+                        <li class="text-white">→ JavaScript</li>
+                        <li class="text-white">→ Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 border border-red-600/30 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-red-600 mb-6">Backend</h3>
+                    <ul class="space-y-3">
+                        <li class="text-white">→ Python</li>
+                        <li class="text-white">→ Java</li>
+                        <li class="text-white">→ C++</li>
+                        <li class="text-white">→ Go</li>
+                        <li class="text-white">→ MySQL</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 border border-red-600/30 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-red-600 mb-6">Tools & DevOps</h3>
+                    <ul class="space-y-3">
+                        <li class="text-white">→ Docker</li>
+                        <li class="text-white">→ Git/GitHub</li>
+                        <li class="text-white">→ VS Code</li>
+                        <li class="text-white">→ DevTools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-100 py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-black mb-16 text-gray-900 relative pb-6">
+                Contactez-moi
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-red-600 rounded"></span>
+            </h2>
+            <p class="text-xl text-gray-700 mb-12">Intéressé par mes projets? N'hésitez pas à me contacter!</p>
+            <div class="flex gap-6 flex-wrap justify-center">
+                <a href="mailto:loic.andrianarivony31@gmail.com" class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-red-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    <span>📧</span> Email
+                </a>
+                <a href="https://www.linkedin.com/in/lo%C3%AFc-andrianarivony-983431344/" class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-red-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg" target="_blank">
+                    <span>💼</span> LinkedIn
+                </a>
+                <a href="https://github.com/LoicAND" class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-red-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg" target="_blank">
+                    <span>🐙</span> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+
+    <footer class="bg-gray-900 text-white py-8 px-6 border-t-2 border-red-600 text-center">
+        <p class="text-gray-300">&copy; 2026 Portfolio | Développeur Web | Passion pour l'innovation! 🚀</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
